@@ -66,9 +66,9 @@ bootstrap_auc_dataframe2 <- data.frame('mean'=bootstrap_results_mean['AUC',],
                                                           'ASRD + RH^','ASRD + RH^ + EHR'),each=2),
                                        'alpha'=rep(c(1,1,1,0.75,0.75,1,0.75),each=2))
 
-bootstrap_fscore_dataframe2 <- data.frame('mean'=bootstrap_results_mean[seq(11,length(bootstrap_results_mean),11)],
-                                          '2.5%ile'=bootstrap_results_2.5ile[seq(11,length(bootstrap_results_mean),11)],
-                                          '97.5%ile'=bootstrap_results_97.5ile[seq(11,length(bootstrap_results_mean),11)],
+bootstrap_fscore_dataframe2 <- data.frame('mean'=bootstrap_results_mean['FscorePrevT',],
+                                          '2.5%ile'=bootstrap_results_2.5ile['FscorePrevT',],
+                                          '97.5%ile'=bootstrap_results_97.5ile['FscorePrevT',],
                                           'period'=rep(c(24,12),7),
                                           'covariates'=rep(c('ASRD','ASRD + PheCode','ASRD + RH','ASRD + EHR','ASRD + RH + EHR',
                                                              'ASRD + RH^','ASRD + RH^ + EHR'),each=2),
